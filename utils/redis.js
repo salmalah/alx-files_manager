@@ -3,6 +3,7 @@ const { promisify } = require('util');
 
 /**
  * performing operations with Redis service
+ *
  */
 class RedisClient {
   constructor() {
@@ -19,8 +20,8 @@ class RedisClient {
   }
 
   /**
-   * Checks if connection to Redis is successful
-   * @returns {boolean}
+   * Check if connection to Redis is successful
+   * @returns bool
    */
   isAlive() {
     return this.client.connected;
@@ -43,8 +44,7 @@ class RedisClient {
 
   /**
    * Sets a new key in Redis with a specific TTL
-   * @param {string} key
-   * @param {string} value
+   * @param {string} key,value
    * @param {number} time
    * @returns {Promise<void>}
    */
